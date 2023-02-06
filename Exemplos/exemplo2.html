@@ -1,0 +1,32 @@
+<html lang="pt-br">
+    <head>
+        <title>Curso de JavaScript</title>
+        <meta charset="UTF-8">
+		<script src="Jquery/jquery-3.6.0.min.js"> </script>
+        <script>
+			$(document).ready(function(){ //Testa se o documento esta pronto.
+				$("#btcalc").click(function(){
+				//Cria uma função caso o usuário click no botão
+				let n1=parseInt($("#Nota1").val());
+				//Atribui o valor do input na variável.
+				let n2=parseInt($("#Nota2").val());
+				//Atribui o valor do Input na variável.
+				let media=(n1+n2)/2; //Calcula a média.
+				$("#fresult").val(media); //Exibe o resultado no Form.
+				});
+				});
+		
+        </script>
+    </head>
+    <body>
+       <form id="f_calc">
+		<label> Nota 1 </label>
+		<input type="text" id="Nota1" value="0"/><br/><br/>
+		<label> Nota 2 </label>
+		<input type="text" id="Nota2" value="0"/><br/><br/>
+		<label> Média </label>
+		<input type="text" id="fresult" disabled ><br><br>
+		<input type="button" id="btcalc" value="Calcular"/>
+	  </form>
+    </body>
+</html>

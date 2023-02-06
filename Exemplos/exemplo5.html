@@ -1,0 +1,30 @@
+<html lang="pt-br">
+    <head>
+        <title>JQuery MouseEventos</title>
+        <meta charset="UTF-8">
+        <script src="Jquery/jquery-3.6.0.min.js"> </script>
+		<style>
+			#bloco{ width:200px;
+			height:200px;
+			background-color: #f00;
+			}
+		</style>
+       
+    </head>
+    <body>
+		<div id="bloco"> </div>
+		<p>
+		<script>
+		//Cria a função a ser executada quando o cursor entra no
+		// elemento com a tag bloco.
+			$( "#bloco").mouseenter(function(){
+				$("p").text("Mouse posicionado sobre a Div.");
+				//Atribui o texto
+				//Cria a função a ser executada quando o curso
+				}).mouseleave(function(){
+					$("p").text("Mouse saiu de cima da Div.");
+					//Atribui o texto.
+				});
+		</script>
+    </body>
+</html>

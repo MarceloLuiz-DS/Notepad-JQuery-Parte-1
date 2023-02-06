@@ -1,0 +1,82 @@
+<html lang="pt-br">
+    <head>
+        <title>4° Desafio JQuery</title>
+        <meta charset="UTF-8">
+		<style>
+			body{
+				background-color: #DCDCDC; 
+				color: #964B00;
+				font-size: 12pt;
+				font-family: arial, 'times new roman';
+				font-style: italic;
+			}
+			.input type {
+				color: black;
+			}
+		</style>
+		<script src="Jquery/jquery-3.6.0.min.js"> </script>
+			
+        <script> 
+		
+			
+			$(document).ready(function(){ //Testa se o documento está pronto.
+				$("#btcalc").click(function(){
+					//Cria uma função caso o usuário click no botão
+					let nome=($("#Nome").val());
+					let n1=parseFloat($("#Media1").val());
+					//Atribui o valor do input na variável.
+					let n2=parseFloat($("#Media2").val());
+					//Atribui o valor do Input na variável.
+					let media = (parseFloat(n1)+parseFloat(n2))/2; //Calcula a soma.
+					let aluno = nome;
+					$("#fresult").val(media); //Exibe o resultado no Form.
+					$("#fNome").val(aluno);
+					
+					let aprovado= "Aprovado (a)";
+					let reprovado= "Reprovado (a)";
+					let recuperacao= "Recuperação";
+					
+					//Comandos IF
+					if (media>=7){
+					$("#faprovado").val(aprovado);
+						$("#faprovado").css({backgroundColor: "FFF", color: "green"});
+					} else if (media<5) {
+					$("#freprovado").val(reprovado);
+						$("#freprovado").css({backgroundColor: "FFF", color: "red"});
+					}else { 
+					$("#frecuperacao").val(recuperacao);
+						$("#frecuperacao").css({backgroundColor: "FFF", color: "orange"});
+					}	
+				});
+				
+				alert("PROFESSORA, SÉRIO, EU ATÉ PULEI kkkkkkk QUANDO CONSEGUI APLICAR A COR, POIS, LEVEI UM SÉCULO... Eu ESTOU eufórico neste momento, Sérioooo... AAAAAAAAAAAAAAAAAAAAAAAA kkkkkkkkk ");
+			});
+				
+        </script>
+    </head>
+    <body>
+       <form id="f_calc">
+			<p> Para saber qual foi a Média e a Situação, digite abaixo as Notas para a realização do calculo:</p> <br>
+	   
+		<label>Digite o Nome do Aluno:</label><br><br>
+			<input type="text" id="Nome"/><br><br>
+		<label> 1 Nota </label>
+			<input type="text" id="Media1" value="0"/> <br/><br/>
+		<label> 2 Nota </label>
+			<input type="text" id="Media2" value="0"/> <br/><br/><br>
+			<input type="button" id="btcalc" value="Calcular"/> <br><br>
+		<label> O Aluno: </label>
+			<input type="text" id="fNome" disabled > <br><br>
+		<label> Teve a Média Final: </label>
+			<input type="text" id="fresult" disabled > <br><br>
+			
+		<label>	E, por tanto, está: </label><br><br>
+			<input type="text" id= "faprovado" disabled> <br><br>
+			<input type="text" id= "freprovado" disabled> <br><br>
+			<input type="text" id= "frecuperacao" disabled> <br><br>
+			
+			<br><br><br> <p> Desafio feito pelo o Aluno: <strong> Marcelo Luiz Dos Santos. </strong> </p>
+		
+	  </form>
+    </body>
+</html>

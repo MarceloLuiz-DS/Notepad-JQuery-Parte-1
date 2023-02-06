@@ -1,0 +1,36 @@
+<html lang="pt-br">
+    <head>
+        <title>CSS com JQuery</title>
+        <meta charset="UTF-8">
+        <script src="Jquery/jquery-3.6.0.min.js"> </script>
+		<script>
+		//Cria a função a ser executada ao clicar quando o elemento está pronto.
+			$(document).ready(function(){ //Testa se o documento esta pronto.
+				$("#azul").click(function(){ //A função a ser executada ao clicar no objeto com a ID #AZUL.
+					$("#corpo").css({backgroundColor:"#191970", color: "#87CEFA"});
+					//Altera o Estilo.
+				});
+				$("#rosa").click(function(){
+					$("#corpo").css({backgroundColor:"#FF69B4", color: "#FF1493"});
+				});
+				$("#claro").click(function(){
+					$("#corpo").css({backgroundColor:"white", color: "black"});
+				});
+			});
+		</script>
+       
+    </head>
+    <body id="corpo">
+		<h3>
+			<div id="azul"> 
+				Azul 
+			</div>
+			<div id="rosa"> 
+				Rosa 
+			</div>
+			<div id="claro"> 
+				Padrão 
+			</div>
+		</h3>
+    </body>
+</html>

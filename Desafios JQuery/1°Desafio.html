@@ -1,0 +1,47 @@
+<html lang="pt-br">
+    <head>
+        <title>1° Desafio JQuery</title>
+        <meta charset="UTF-8">
+		<style>
+			body{
+				background-color: #e8bfbf;
+				color: black;
+				font-size: 12pt;
+				font-family: arial, 'times new roman';
+				font-style: italic;
+			}
+		</style>
+		<script src="Jquery/jquery-3.6.0.min.js"> </script>
+        <script>
+			
+			$(document).ready(function(){ //Testa se o documento esta pronto.
+				$("#btcalc").click(function(){
+				//Cria uma função caso o usuário click no botão
+				let n1=parseInt($("#Num1").val());
+				//Atribui o valor do input na variável.
+				let n2=parseInt($("#Num2").val());
+				//Atribui o valor do Input na variável.
+				let somando=(n1+n2); //Calcula a soma.
+				$("#fresult").val(somando); //Exibe o resultado no Form.
+				});
+				});
+			
+        </script>
+    </head>
+    <body>
+       <form id="f_calc">
+			<p> Para Somar, digite abaixo os valores para a realização do calculo:</p> <br>
+	   
+		<label> Número 1 </label>
+		<input type="text" id="Num1" value="0"/><br/><br/>
+		<label> Número 2 </label>
+		<input type="text" id="Num2" value="0"/><br/><br/>
+		<label> Soma </label>
+		<input type="text" id="fresult" disabled ><br><br>
+		<input type="button" id="btcalc" value="Calcular"/>
+		
+			<br><br><br> <p> Desafio feito pelo o Aluno: <strong> Marcelo Luiz Dos Santos. </strong> </p>
+		
+	  </form>
+    </body>
+</html>

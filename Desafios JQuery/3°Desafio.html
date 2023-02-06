@@ -1,0 +1,39 @@
+<html lang="pt-br">
+    <head>
+        <title>3° Desafio JQuery</title>
+        <meta charset="UTF-8">
+		<script src="Jquery/jquery-3.6.0.min.js"> </script>
+        <script>
+		//Cria a função a ser executada ao clicar quando o elemento está pronto.
+			$(document).ready(function(){ //Testa se o documento esta pronto.
+				$("#dark").click(function(){ //A função a ser executada ao clicar no objeto com a ID #Dark.
+					$("#corpo").css({backgroundColor:"black", color: "white", font: "algerian"});
+					//Altera o Estilo.
+			});
+			$("#light").click(function(){
+				$("#corpo").css({backgroundColor:"white", color: "black", font: "gigi"});
+			});
+			$("#personalizado").click(function(){
+				$("#corpo").css({backgroundColor:"gray", color: "purple", font: "arial"});
+			});
+		});
+		</script>
+       
+    </head>
+    <body id="corpo">
+		<p>Clique em uma das opçoes abaixo para mudar a cor de Fundo da página e as cor das Fontes para:</p>
+		<h3>
+			<div id="dark"> 
+				Dark 
+			</div> <br>
+			<div id="light"> 
+				Light
+			</div> <br>
+			<div id="personalizado"> 
+				Personalizado 
+			</div> <br>
+		</h3>
+		<br><br><br> <p> Desafio feito pelo o Aluno: <strong> Marcelo Luiz Dos Santos. </strong> </p>
+		
+    </body>
+</html>
